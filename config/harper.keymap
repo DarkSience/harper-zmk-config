@@ -17,11 +17,39 @@
 
 / {
     macros {
-        new_macro: new_macro {
+        ez: ez {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp A>;
-            label = "NEW_MACRO";
+            bindings = <&kp FSLH &kp E &kp Z>;
+            label = "EZ";
+        };
+
+        get_better: get_better {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH &kp G &kp E &kp T &kp SPACE &kp B &kp E &kp T &kp T &kp E &kp R &kp SPACE &kp B &kp U &kp D &kp D &kp Y>;
+            label = "GET_BETTER";
+        };
+
+        cry: cry {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH &kp D &kp O &kp N &kp SQT &kp T &kp SPACE &kp C &kp R &kp Y>;
+            label = "CRY";
+        };
+
+        weak: weak {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH &kp Y &kp O &kp U &kp SQT &kp R &kp E &kp SPACE &kp S &kp O &kp SPACE &kp W &kp E &kp A &kp K &kp SPACE &kp L &kp M &kp A &kp O>;
+            label = "WEAK";
+        };
+
+        del: del {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH &kp D &kp E &kp L &kp E &kp T &kp E &kp SPACE &kp T &kp H &kp I &kp S &kp SPACE &kp G &kp A &kp M &kp E &kp SPACE &kp T &kp R &kp A &kp S &kp H>;
+            label = "DEL";
         };
     };
 
@@ -69,12 +97,12 @@
 
         Gaming {
             bindings = <
-&trans  &trans           &trans  &trans  &trans  &trans          &kp N1         &kp N2   &kp N3     &kp N4  &kp N5  &kp N6
-&trans  &trans           &trans  &trans  &trans  &trans          &kp Q          &kp W    &kp E      &kp R   &kp T   &kp Y
-&trans  &trans           &trans  &trans  &trans  &trans          &kp A          &kp S    &kp D      &kp F   &kp G   &kp H
-&trans  &trans           &trans  &trans  &trans  &trans          &trans         &kp TAB  &kp Z      &kp X   &kp C   &kp V
-&kp B   &kp RIGHT_SHIFT  &trans  &trans  &trans  &trans  &trans  &trans         &trans   &kp SPACE  &to 0   &trans  &trans  &kp RIGHT_ALT
-                                                                 &kp RIGHT_GUI                                              &kp LCTRL
+&ez        &get_better     &cry    &weak   &del    &trans          &kp N1         &kp N2  &kp N3     &kp N4  &kp N5  &kp N6
+&trans     &trans          &trans  &trans  &trans  &trans          &kp Q          &kp W   &kp E      &kp R   &kp T   &kp Y
+&kp TAB    &trans          &trans  &trans  &trans  &trans          &kp A          &kp S   &kp D      &kp F   &kp G   &kp H
+&kp SLASH  &trans          &trans  &trans  &trans  &trans          &trans         &none   &kp Z      &kp X   &kp C   &kp V
+&kp B      &kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans  &trans         &trans  &kp SPACE  &to 0   &trans  &trans  &kp RIGHT_ALT
+                                                                   &kp RIGHT_GUI                                             &kp LCTRL
             >;
         };
     };
